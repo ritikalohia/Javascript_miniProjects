@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow-x: hidden;
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1520' height='733' preserveAspectRatio='none' viewBox='0 0 1520 733'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1549%26quot%3b)' fill='none'%3e%3crect width='1520' height='733' x='0' y='0' fill='%230e2a47'%3e%3c/rect%3e%3cpath d='M0%2c595.361C114.994%2c593.545%2c224.985%2c562.059%2c326.612%2c508.218C435.335%2c450.618%2c543.944%2c383.27%2c603.524%2c275.62C665.293%2c164.015%2c684.659%2c30.281%2c660.448%2c-94.958C636.808%2c-217.242%2c543.326%2c-306.773%2c471.295%2c-408.379C390.773%2c-521.962%2c345.146%2c-681.631%2c213.147%2c-725.913C81.078%2c-770.218%2c-65.031%2c-700.005%2c-184.509%2c-628.38C-287.879%2c-566.411%2c-334.499%2c-449.05%2c-408.009%2c-353.542C-476.453%2c-264.617%2c-584.049%2c-197.331%2c-601.585%2c-86.495C-619.175%2c24.678%2c-545.696%2c125.481%2c-500.079%2c228.379C-453.92%2c332.499%2c-425.132%2c451.259%2c-333.311%2c518.642C-239.496%2c587.488%2c-116.351%2c597.199%2c0%2c595.361' fill='%230b2239'%3e%3c/path%3e%3cpath d='M1520 1302.897C1643.874 1291.975 1770.105 1348.0720000000001 1885.508 1301.742 2011.652 1251.1 2131.95 1161.813 2184.103 1036.286 2235.8 911.855 2178.219 774.488 2160.0370000000003 640.977 2141.701 506.33799999999997 2172.393 347.132 2077.064 250.301 1981.769 153.50400000000002 1823.059 174.38699999999994 1687.852 161.34900000000005 1575.917 150.55600000000004 1466.693 152.476 1357.905 180.95500000000004 1246.318 210.16700000000003 1144.311 258.178 1052.291 327.728 941.014 411.833 770.994 485.70500000000004 770.151 625.188 769.274 770.293 988.223 816.33 1048.541 948.308 1108.829 1080.22 994.672 1282.887 1110.583 1370.065 1223.393 1454.9099999999999 1379.3899999999999 1315.2939999999999 1520 1302.897' fill='%23113255'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1549'%3e%3crect width='1520' height='733' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+        }
+        .keys{
+            display: flex; 
+            top: 45%;
+            position: absolute;
+        }
+        .sound{
+            display: none;
+        }
+
+        .key{
+            border: 2px solid tomato;
+            background: none;
+            color: tomato;
+            padding: 20px 40px;
+            margin-left: 20px;
+            font-size: 25px;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+
+        @media (max-width: 500px ){
+        .keys{
+            
+        }
+
+        .key{
+            padding: 10px 20px;
+            margin-left: 5px;
+            font-size: 15px;
+        }
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="keys">
+        <div data-key="65" class="key">
+            <kbd>A</kbd>
+            <span class="sound">clap</span>
+        </div>
+        <div data-key="83" class="key">
+            <kbd>S</kbd>
+            <span class="sound">hihat</span>
+        </div>
+        <div data-key="68" class="key">
+            <kbd>D</kbd>
+            <span class="sound">kick</span>
+        </div>
+        <div data-key="70" class="key">
+            <kbd>F</kbd>
+            <span class="sound">openhat</span>
+        </div>
+        <div data-key="71" class="key">
+            <kbd>G</kbd>
+            <span class="sound">boom</span>
+        </div>
+        <div data-key="72" class="key">
+            <kbd>H</kbd>
+            <span class="sound">ride</span>
+        </div>
+        <div data-key="74" class="key">
+            <kbd>J</kbd>
+            <span class="sound">snare</span>
+        </div>
+        <div data-key="75" class="key">
+            <kbd>K</kbd>
+            <span class="sound">tom</span>
+        </div>
+        <div data-key="76" class="key">
+            <kbd>L</kbd>
+            <span class="sound">tink</span>
+        </div>
+    </div>
+
+    <audio data-key="65" src="sounds/clap.wav"></audio>
+    <audio data-key="83" src="sounds/hihat.wav"></audio>
+    <audio data-key="68" src="sounds/kick.wav"></audio>
+    <audio data-key="70" src="sounds/openhat.wav"></audio>
+    <audio data-key="71" src="sounds/boom.wav"></audio>
+    <audio data-key="72" src="sounds/ride.wav"></audio>
+    <audio data-key="74" src="sounds/snare.wav"></audio>
+    <audio data-key="75" src="sounds/tom.wav"></audio>
+    <audio data-key="76" src="sounds/tink.wav"></audio>
+
+    <script>
+        window.addEventListener('keydown', function(e){
+            const audio = document.querySelector('audio[data-key="${e.keyCode}"]');
+            if(!audio) return;
+            audio.play();
+        });
+    </script>
+</body>
+</html>
